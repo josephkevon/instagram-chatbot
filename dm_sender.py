@@ -6,8 +6,8 @@ import os
 import json
 from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes, RateLimitError
 
-USERNAME = "sbrandingrw"
-PASSWORD = "SagaCityBrandingAgency@1!"
+USERNAME = # your Instagram username
+PASSWORD = # your Instagram password
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
@@ -292,5 +292,6 @@ while True:
             wait_time = min(300, 30 * consecutive_errors)  # Cap at 5 minutes
             print(f"⚠️ Error (#{consecutive_errors}): {e}")
             print(f"⏳ Waiting {wait_time} seconds before retry...")
+
 
         time.sleep(wait_time)
